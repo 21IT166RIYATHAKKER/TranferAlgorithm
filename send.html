@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="https://www.google.com/favicon.ico" type=""> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <title>TRY</title>
+</head>
+<style>
+ 
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+    .topnav {
+        
+      overflow: hidden;
+      background-color: white;
+      border-bottom: 0.5px solid lightgray;
+    }
+    
+    .topnav a {
+       
+      float: left;
+
+      justify-content: center;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 8px 18px;
+      text-decoration: none;
+      font-size: 17px;
+      border-bottom: 3px solid transparent;
+    }
+    
+    .topnav a:hover {
+        background-color: whitesmoke;
+        
+      border-bottom: 3px solid royalblue;
+    }
+    .topnav a.activee:hover
+    {
+        background-color: rgba(226, 238, 255, 0.788);
+    }
+    .topnav a.activee {
+      color: royalblue;
+      border-bottom: 3px solid royalblue;
+    }
+    
+    </style>
+<body>
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid">
+         
+        </div>
+      </nav>
+      <span style="align-items: center;">
+      <div class="topnav d-flex justify-content-center">
+       
+        
+        <a href="activity.php" >Activity</a>
+        <a href="send.html" class="activee" >Tranfer Money</a>
+        <a href="register.html">Register</a>
+        
+      </div>
+    </span>
+   
+
+
+
+<main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Tranfer</div>
+                        <div class="card-body">
+                            <form name="my-form"  action="transfer.php" method="POST">
+                                
+                                <div class="form-group row mt-3">
+                                    <label for="from" class="col-md-4 col-form-label text-md-right">Your ID</label>
+                                    <div class="col-md-3">
+                                        <input required type="text" id="from" class="form-control" onkeyup="showcontact(this.value)" name="from">
+
+                                    </div>
+                                    <div class="col-md-3">                                        
+                                        <span id="txtHint"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-3">
+                                    <label for="to" class="col-md-4 col-form-label text-md-right">TO (id)
+                                        
+                                    </label>
+                                     
+                                    <div class="col-md-3">
+                                        <input required type="text" id="to" class="form-control"  name="to">
+                                        
+                                     </div>
+            
+
+
+                                </div>
+                                
+                                <div class="form-group row mt-3">
+                                    <label for="pin" class="col-md-4 col-form-label text-md-right">Your UPI pin</label>
+                                    <div class="col-md-6">
+                                        <input required type="password" id="pin" class="form-control" name="pin" minlength="6" maxlength="6" pattern="\d{6}">
+                                        <small class="form-text text-muted">Enter a 6-digit UPI pin.</small>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="form-group row mt-3">
+                                    <label for="amt" class="col-md-4 col-form-label text-md-right">Amount</label>
+                                    <div class="col-md-6">
+                                        
+                                        <input required type="text" id="amt" class="form-control" name="amt" >
+                                    
+                                    </div>
+                                </div>
+
+                                    <div class="col-md-6 offset-md-4 mt-3">
+                                        <button type="submit" class="btn btn-primary">
+                                        SEND
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

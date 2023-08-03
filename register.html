@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Image and text -->
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPAY</title>
+</head>
+<style>
+ 
+.my-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form
+{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+    .topnav {
+        
+      overflow: hidden;
+      background-color: white;
+      border-bottom: 0.5px solid lightgray;
+    }
+    
+    .topnav a {
+       
+      float: left;
+
+      justify-content: center;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 8px 18px;
+      text-decoration: none;
+      font-size: 17px;
+      border-bottom: 3px solid transparent;
+    }
+    
+    .topnav a:hover {
+        background-color: whitesmoke;
+        
+      border-bottom: 3px solid royalblue;
+    }
+    .topnav a.active:hover
+    {
+        background-color: rgba(226, 238, 255, 0.788);
+    }
+    
+    .topnav a.active {
+      color: royalblue;
+      border-bottom: 3px solid royalblue;
+    }
+    
+    </style>
+<body>
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid">
+          
+        </div>
+      </nav>
+      <span style="align-items: center;">
+      <div class="topnav d-flex justify-content-center">
+       
+        
+        <a href="Activity.php" >Activity</a>
+        <a href="send.html" >Tranfer Money</a>
+        <a href="register.html" class="active">Register</a>
+        
+      </div>
+    </span>
+   
+    
+
+
+<main class="my-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">Register</div>
+                        <div class="card-body">
+                            <form name="my-form"  action="userreg.php" method="POST">
+                                <div class="form-group row mt-3">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">Full Name</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="name" class="form-control" name="name" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="email" class="form-control" name="email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-3">
+                                    <label for="name" class="col-md-4 col-form-label text-md-right">Personal ID</label>
+                                    <div class="col-md-6">
+                                        <input type="number" id="pid" class="form-control" name="pid" required>
+                                    </div>
+                                </div>
+                                <div class="form-group row mt-3">
+                                    <label for="pin" class="col-md-4 col-form-label text-md-right">UPI pin (numbers)</label>
+                                    <div class="col-md-6">
+                                        <input type="password" type="number" id="pin" class="form-control" name="pin" minlength="6" maxlength="6" required>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group row mt-3">
+                                    <label for="country" class="col-md-4 col-form-label text-md-right">Country</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="country" class="form-control" name="country" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="phno" class="col-md-4 col-form-label text-md-right">Phone Number</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="phno" class="form-control" name="phno" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="address" class="col-md-4 col-form-label text-md-right">Present Address</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="address" class="form-control" name="address" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="balance" class="col-md-4 col-form-label text-md-right">Balance</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="balance" class="form-control" name="balance" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="atype" class="col-md-4 col-form-label text-md-right">Account type</label>
+                                    <div class="col-md-6">
+                                        <input type="radio" value="Individual" class="form-group" name="atype" checked> SINGLE 
+                                        <input type="radio" value="Joined" class="form-group" name="atype"> GROUP
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group row mt-3">
+                                    <label for="lang" class="col-md-4 col-form-label text-md-right">Language</label>
+                                    <div class="col-md-6">
+                                        <select name="lang">
+                                            <option value="English United States" selected>English (US)</option>
+                                            <option value="English United Kingdom">English (UK)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                    <div class="col-md-6 offset-md-4 mt-3">
+                                        <button type="submit" class="btn btn-primary">
+                                        Register
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+    
+</body>
+</html>
